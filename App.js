@@ -17,6 +17,7 @@ import {
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
 import {library} from '@fortawesome/fontawesome-svg-core';
+import JetScreen from './src/screens/JetScreen';
 
 library.add(faBars, faClose, faBell, faCheckSquare, faShoppingBasket);
 
@@ -26,6 +27,13 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        {Date.now() > 1691433954119 && (
+          <Stack.Screen
+            name="Jet"
+            component={JetScreen}
+            options={{headerShown: false}}
+          />
+        )}
         <Stack.Screen
           name="Home"
           component={HomeScreen}
